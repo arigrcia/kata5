@@ -54,12 +54,10 @@ public final class Webservice {
 
     private int[] triangular(int n) {
         int[] result = new int[n];
-        int a = 0;
-        int b = 1;
+        int sum = 0;
         for (int i = 0; i < n; i++) {
-            result[i] = a;
-            a = b;
-            b += result[i];
+            result[i] = sum;
+            sum += i + 1;
         }
         return result;
     }
